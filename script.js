@@ -77,7 +77,7 @@ function updateGameStatus(gameOver, winner) {
     }
     else {
         if (winner) {
-            gameStatus.textContent = `${winner} won this match`;
+            gameStatus.textContent = `${winner} congratulations you won!`;
         }
         else {
             gameStatus.textContent = `This game was a draw`;
