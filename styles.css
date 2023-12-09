@@ -1,1 +1,136 @@
 /*  your css code here. If applicable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: fantasy;
+}
+
+:root {
+    --primary: #181818;
+}
+
+button {
+    cursor: pointer;   
+}
+
+header {
+    min-height: 16vh;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 30px;
+    >h1 {
+        font-size: 48px;
+    }
+    >h3 >button {
+        font-size: 24px;
+        font-weight: 100;
+
+        font-style: oblique;
+
+        padding-inline: 5px;
+
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid green;
+    }
+}
+#new-game-button:active {
+    color: green;
+}
+
+#main-menu {
+    padding-block: 24px;
+
+    >form {
+        width: 25%;
+        min-width: fit-content;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        row-gap: 24px;
+
+        margin-inline: auto;
+
+        >div {
+            width: 100%;
+            display: flex;
+            column-gap: 12px;
+            >label {
+                text-wrap: nowrap;
+            }
+            >input {
+                flex-grow: 1;
+            }
+
+
+        }
+
+        >button {
+            width: 50%;
+        }
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.board-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    row-gap: 24px;
+
+    /* width: 50%; */
+    padding-block: 24px;
+    /* padding-inline: 24px; */
+
+    min-width: fit-content
+}
+.game-status {
+    padding-block: 12px;
+
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);    
+
+}
+.border-right {
+    border-right: 3px solid var(--primary);
+}
+.border-left {
+    border-left: 3px solid var(--primary);
+}
+.border-up-down {
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+}
+
+
+.cell {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    padding-bottom: 20%;
+
+    font-size: 32px;
+}
+
+.winning-move {
+    background-color: blueviolet;
+    color: white;
+}

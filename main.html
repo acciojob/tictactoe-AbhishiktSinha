@@ -8,6 +8,36 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<div id="root">
+        <header>
+            <h1 class="game-title">Tic Tac Toe</h1>
+            <h3><button id="new-game-button">Start New Game</button></h3>
+        </header>
+        <div id="main-menu">
+            <form method="get" class="new-game-form">
+                <div class="player-input-field"><label for="p1-input">Player 1</label><input id="p1-name" name="p1_Name" type="text" placeholder="enter name"></div>
+                <div class="player-input-field"><label for="p2-input">Player 2</label><input id="p2-name" name="p2_Name" type="text" placeholder="enter name"></div>
+                <button type="submit">Start Game</button>
+            </form>
+        </div>
+
+        <div class="board-container hide">
+            <div class="game-status"></div>
+            <div id="board">
+                <div id="cell-1" data-row="0" data-col="0" class="cell"></div>
+                <div id="cell-2" data-row="0" data-col="1" class="cell border-right border-left"></div>
+                <div id="cell-3" data-row="0" data-col="2" class="cell"></div>
+
+                <div id="cell-4" data-row="1" data-col="0" class="cell border-up-down"></div>
+                <div id="cell-5" data-row="1" data-col="1" class="cell border-up-down border-left border-right"></div>
+                <div id="cell-6" data-row="1" data-col="2" class="cell border-up-down"></div>
+
+                <div id="cell-7" data-row="2" data-col="0" class="cell"></div>
+                <div id="cell-8" data-row="2" data-col="1" class="cell border-right border-left"></div>
+                <div id="cell-9" data-row="2" data-col="2" class="cell"></div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="./script.js">
 </script>
 
